@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 0px 20px;
+    align-items: center;
+}
+.add_movie_btn, .edit_movie_btn, .remove_movie_btn{
+    background-color: orange;
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.card_container{
+    margin: 35px 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.movie_card{
+    height: 450px;
+    width: 400px;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 20px;
+}
+/* 
+.movie_card:first-child{
+    margin-left: 0px;
+}
+.movie_card:nth-last-col{
+    margin-right: 0px;
+} */
+
+.movie_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.movie_banner_holder{
+    height: 200px;
+    width: 400px;
+    /* background: url('./Icons/asuran1.jpg'); */
+    background-size: cover !important;
+}
+.movie_details{
+    padding: 5px 15px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+.movie_details p{
+    margin: 5px 0px;
+}
+.language_text{
+    color: #00bfff;
+    font-weight: 300;
+    text-align: right;
+    margin: 0px;
+    padding: 15px;
+}
+.edit_movie_btn, .remove_movie_btn{
+    width: 43%;
+    height: 50px;
+    cursor: pointer;
+}
+.action_button_container{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+.remove_movie_btn{
+    background-color: red;
+}
+.rating_container{
+margin: 15px 10px;
+text-align: center;
+}
+
+.rating_container input[type="checkbox"]{
+	width:100%;
+	height:100%;
+	opacity:0;
+	cursor:pointer;	
+}
+.rating_container label{
+	position:relative;
+	width: 50px;
+    height: 50px;
+    display: inline-block;	
+}
+.rating_container .check::before, .rated::after{
+	content:'\2605';
+	font-size:60px;
+	position:absolute;
+	color:#777;
+	left:0;
+	bottom:0;
+  line-height: 50px;	
+}
+.rating_container .rated::after{
+	color:orange;
+    cursor:pointer;	
+}
+.movie_creation_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .input_heading{
+      font-weight: 300;
+      margin: 10px 0px;
+  }
+  .feild_container{
+      width: 46%;
+      margin: 10px ;
+  }
+  .input_feild{
+    height: 35px;
+    border-radius: 4px;
+    width: 95%;
+    outline: none;
+    border: 1px solid #e1d5d5;
+    padding: 1px 10px;
+    margin-top: 10px;
+  }
+  .form_holder{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .dropDown{
+    margin: 10px 0px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 1px solid #e1d5d5;
+    border-radius: 4px;
+    padding: 13px;
+  }
+  .imageUrl{
+    margin: 10px 0px;
+    width: 95%;
+    background: transparent;
+    outline: none;
+    border: 1px solid #e1d5d5;
+    border-radius: 4px;
+    padding: 10px;  
+  }
+  .center{
+      text-align: center;
+  }
+  .banner_image_change{
+    font-weight: 900;
+    font-size: 12px;
+    border: 1px solid #4f4040;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    color: orange;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+  }
+  .banner_image_name{
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+  }

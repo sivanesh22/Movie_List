@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Movie List</title>
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <h2>Movie List</h2>
+            <button class="add_movie_btn" onclick="openModal()">Add Movie</button>
+        </div>
+    </section>
+    <section>
+        <div class="card_container" id='card_container'>
+          
+        </div>
+        <div id="movie_creation_modal" class="movie_creation_modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Add new movie</h3>
+                <form>
+                    <div class="form_holder">
+                        <div class="feild_container">
+                            <label class="input_heading">Title</label>
+                            <br>
+                            <input type="text" class="input_feild" id="title" name="title"><br>
+                        </div>
+                        <div class="feild_container">
+                            <label class="input_heading">Release Date</label>
+                            <br>
+                            <input type="date" class="input_feild" id="release_date" name="release_date"><br>
+                        </div>
+                        <div class="feild_container">
+                            <label class="input_heading">Language</label>
+                            <br>
+                            <select name="language" id="language" class="dropDown">
+                                <option value="">Select a language</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="Malayalam">Malayalam</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="English">English</option>
+                            </select>
+                        </div>
+                        <div class="feild_container">
+                            <label class="input_heading">Banner Image</label><span class="banner_image_change" id='banner_image_change'
+                              onclick="changeBannerImage()" >Change</span>
+                            <br>
+                            <input type="file" id='imageUrl' class="imageUrl" onchange="readURL(event)" accept=".jpg" />
+                            <p class="banner_image_name" id='banner_image_name'></p>
+                        </div>
+                        <br>
+                    </div>
+                  <div class="center"><input type="button" value="Save" class="add_movie_btn"  onclick="addMovie()"  ></div>  
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+<script src="script.js"></script>
+
+</html>
